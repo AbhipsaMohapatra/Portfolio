@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import "react-multi-carousel/lib/styles.css";
+import Snowfall from 'react-snowfall';
 
 const Skills = () => {
   const responsive = {
@@ -26,6 +27,7 @@ const Skills = () => {
 
   return (
     <section className="skill-section py-20 bg-[#0a0a0a] text-white" id="skills">
+      
       <div className="container mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold">Skills</h2>
@@ -55,6 +57,7 @@ const Skills = () => {
           ))}
         </Carousel>
       </div>
+     
     </section>
   );
 };

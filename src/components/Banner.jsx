@@ -52,10 +52,14 @@ const Banner = () => {
                 />
               </span>
             </h1>
-            
-            <button className='group mt-6 border-2 border-white flex gap-2 justify-center items-center px-6 py-3 rounded-md hover:bg-white hover:text-black transition-all duration-300' onClick={() => console.log('connect')}>
+            <a href="#contacts">
+               <button  className='group mt-6 border-2 border-white flex gap-2 justify-center items-center px-6 py-3 rounded-md hover:bg-white hover:text-black transition-all duration-300' onClick={() => console.log('connect')}>
               Let's Connect <BsArrowRightCircle className="group-hover:translate-x-1 transition-transform"/>
             </button>
+
+            </a>
+            
+           
           </div>
 
           {/* IMAGE AREA */}

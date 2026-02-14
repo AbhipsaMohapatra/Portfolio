@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
-
+import { Link,NavLink } from "react-router-dom";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -32,12 +32,13 @@ const Navbar = () => {
           Abhipsa Mohapatra
         </div>
         <div className="w-1/2  sm:w-2/4 flex justify-center items-center  gap-5  sm:gap-12">
-          <div>Home</div>
-          <div>Skills</div>
+          <a href="#" className="hover:cursor-pointer" >Home</a>
+          <a href="#skills" className="hover:cursor-pointer">Skills</a>
           <div>Projects</div>
-          <div className="flex gap-1 sm:gap-2">
+          <div className="flex gap-1 sm:gap-3">
             <a
-              href="#"
+              href="https://www.linkedin.com/in/abhipsa-mohapatra"
+              target="_blank"
               className="relative group flex items-center justify-center border-2 border-white rounded-full 
              h-8 w-8 sm:h-10 sm:w-10 
              overflow-hidden transition-all duration-300 hover:scale-110"
@@ -47,7 +48,8 @@ const Navbar = () => {
               <FaLinkedin className="relative z-10 size-4 sm:size-5 text-white transition-colors duration-300 group-hover:text-black" />
             </a>
              <a
-              href="#"
+              href="https://github.com/AbhipsaMohapatra"
+              target="_blank"
               className="relative group flex items-center justify-center border-2 border-white rounded-full 
              h-8 w-8 sm:h-10 sm:w-10 
              overflow-hidden transition-all duration-300 hover:scale-110"
@@ -56,7 +58,7 @@ const Navbar = () => {
 
               <FaGithub className="relative z-10 size-4 sm:size-5 text-white transition-colors duration-300 group-hover:text-black" />
             </a>
-            <a
+            {/* <a
               href="#"
               className="relative group flex items-center justify-center border-2 border-white rounded-full 
              h-8 w-8 sm:h-10 sm:w-10 
@@ -65,12 +67,13 @@ const Navbar = () => {
               <span className="absolute bottom-0 left-0 w-full h-0 bg-gray-400 transition-all duration-300 ease-out group-hover:h-full"></span>
 
               <SiLeetcode className="relative z-10 size-4 sm:size-5 text-white transition-colors duration-300 group-hover:text-black" />
-            </a>
+            </a> */}
           </div>
         </div>
         <a
-          href="#"
-          className="w-1/4 hidden sm:block p-2 border text-center transition-all duration-500 ease-in-out bg-bottom-left bg-linear-to-r from-gray-400 to-gray-700 bg-[length:0%_100%] bg-no-repeat hover:bg-[length:100%_100%] hover:text-white hover:scale-110"
+          href="#contacts"
+
+          className=" w-1/4 hidden sm:block p-2 border text-center transition-all duration-500 ease-in-out bg-bottom-left bg-linear-to-r from-gray-400 to-gray-700 bg-[length:0%_100%] bg-no-repeat hover:bg-[length:100%_100%] hover:text-white hover:scale-110"
         >
           Let's Connect
         </a>{" "}

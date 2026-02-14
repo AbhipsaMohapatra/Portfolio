@@ -8,6 +8,9 @@
   box-shadow: 0 0 10px #d92bb6, 0 0 20px #c918a5;
   animation: magic-float 8s ease-in-out infinite;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Different sizes for depth */
 .dot-0 { width: 4px; height: 4px; }
