@@ -1,6 +1,8 @@
 import React from "react";
+import { useState } from "react";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { Typewriter } from "react-simple-typewriter";
+import ChatBox from "./ChatBox";
 
 const Banner = () => {
   const dots = Array.from({ length: 20 });
@@ -10,6 +12,8 @@ const Banner = () => {
   let get2 = ()=>{
     return Math.random()*0.5
   }
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   return (
     <section className="relative overflow-hidden my-20 text-xl pt-20" id="home">
       {/* --- MAGIC FLOATING ELEMENTS --- */}
@@ -52,12 +56,12 @@ const Banner = () => {
                 />
               </span>
             </h1>
-            <a href="#contacts">
-               <button  className='group mt-6 border-2 border-white flex gap-2 justify-center items-center px-6 py-3 rounded-md hover:bg-white hover:text-black transition-all duration-300' onClick={() => console.log('connect')}>
-              Let's Connect <BsArrowRightCircle className="group-hover:translate-x-1 transition-transform"/>
+           
+               <button onClick={()=>setIsDrawerOpen(true)}  className='group mt-6 border-2 border-white flex gap-2 justify-center items-center px-6 py-3 rounded-md hover:bg-white hover:text-black transition-all duration-300' >
+              Ask My AI <BsArrowRightCircle className="group-hover:translate-x-1 transition-transform"/>
             </button>
 
-            </a>
+            
             
            
           </div>
@@ -75,6 +79,7 @@ const Banner = () => {
 
         </div>
       </div>
+      <ChatBox open={isDrawerOpen} setOpen={setIsDrawerOpen}/>
     </section>
   );
 };
