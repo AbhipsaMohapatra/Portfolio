@@ -10,8 +10,8 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { GoogleGenAI } from "@google/genai";
 
 // Initialize the SDK correctly with your key
-// const genAI = new GoogleGenerativeAI("AIzaSyCvTkz6877VH62arZW_YC0iZgsbYKSIaNo");
-const ai = new GoogleGenAI({ apiKey: "AIzaSyCvTkz6877VH62arZW_YC0iZgsbYKSIaNo" });
+
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEM_KEY });
 
 const ChatBox = ({ open, setOpen }) => {
   const [input, setInput] = useState("");
