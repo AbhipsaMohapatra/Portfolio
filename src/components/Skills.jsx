@@ -26,7 +26,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="skill-section py-20 bg-[#0a0a0a] text-white" id="skills">
+    <section className="skill-section py-20 bg-[#0a0a0a] text-white m-10 rounded-2xl" id="skills">
       
       <div className="container mx-auto">
         <div className="text-center mb-10">
@@ -36,7 +36,7 @@ const Skills = () => {
 
         <Carousel responsive={responsive} infinite={true} className="skill-slider p-10">
           {skillsData.map((skill, index) => (
-            <div key={index} className="item flex flex-col items-center justify-center gap-6">
+            <div key={index} className="item flex flex-col items-center justify-center gap-5">
               {/* Circular Loader Area */}
               <div className="w-32 h-32 md:w-40 md:h-40">
                 <CircularProgressbar

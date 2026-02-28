@@ -34,7 +34,8 @@ const Navbar = () => {
         <div className="w-1/2  sm:w-2/4 flex justify-center items-center  gap-5  sm:gap-12">
           <a href="#" className="hover:cursor-pointer" >Home</a>
           <a href="#skills" className="hover:cursor-pointer">Skills</a>
-          <div>Projects</div>
+          <a href="#projects" className="hover:cursor-pointer">Projects</a>
+         
           <div className="flex gap-1 sm:gap-3">
             <a
               href="https://www.linkedin.com/in/abhipsa-mohapatra"

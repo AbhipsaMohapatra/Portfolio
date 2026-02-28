@@ -48,7 +48,7 @@ const Contact = () => {
   return (
     <section className="contact" id="contacts">
       {/* <Snowfall/> */}
-      <div className="bg-gradient-to-r from-pink-600 to bg-purple-600 via-fuchsia-300 flex justify-between items-center p-20">
+      <div className="bg-gradient-to-r from-pink-600 to bg-purple-600 via-fuchsia-300 flex flex-col sm:flex-row gap-20 sm:gap-10 justify-between items-center p-20">
         <div className="border border-black shadow-amber-100 p-2">
           <img
             src="contactpic3.jpg"
@@ -56,49 +56,49 @@ const Contact = () => {
             alt="Contact"
           />
         </div>
-        <div className=" w-1/2">
+        <div className="w-full sm:w-1/2">
           <h2 className="text-slate-800 font-bold text-3xl">Get In Touch</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="">
-            <div className=" my-3 flex  items-center gap-3">
+            <div className="my-5 sm:my-3 flex flex-col sm:flex-row  items-center gap-3">
               <input
                 placeholder="First Name"
-                className=" text-black w-1/3 p-3 rounded-md border border-slate-800 bg-white/10 backdrop-blur-md   outline-none focus:ring-2 focus:ring-white/10 transition-all"
+                className=" text-black w-full sm:w-1/3 p-3 rounded-md border border-slate-800 bg-white/10 backdrop-blur-md   outline-none focus:ring-2 focus:ring-white/10 transition-all"
                 {...register("firstName", { required: true, maxLength: 20 })}
               />
               {errors.firstName?.type === "required" && (
-                <div role="alert" className="text-red-300 text-bold ">
-                  First name is required
+                <div role="alert" className="text-yellow-800 font-bold ">
+                  First name is required ***
                 </div>
               )}
               <input
                 placeholder="Last Name"
-                className=" text-black w-1/3 p-3 rounded-md border border-slate-800 bg-white/10 backdrop-blur-md   outline-none focus:ring-2 focus:ring-white/10 transition-all"
+                className=" text-black w-full sm:w-1/3 p-3 rounded-md border border-slate-800 bg-white/10 backdrop-blur-md   outline-none focus:ring-2 focus:ring-white/10 transition-all"
                 {...register("lastName", {
                   required: "Enter the last name",
                   pattern: /^[A-Za-z]+$/i,
                 })}
               />
               {errors.lastName?.type === "required" && (
-                <p role="alert" className="text-red-300 text-bold ">
-                  {errors.lastName.message}
+                <p role="alert" className="text-yellow-800 font-bold">
+                  {errors.lastName.message} ***
                 </p>
               )}
             </div>
-            <div className=" mb-3 flex  items-center gap-3">
+            <div className=" mb-3 flex flex-col sm:flex-row  items-center gap-3">
               <input
                 placeholder="Email Address"
-                className=" text-black w-1/3 p-3 rounded-md border border-slate-800 bg-white/10 backdrop-blur-md   outline-none focus:ring-2 focus:ring-white/10 transition-all"
+                className=" text-black w-full sm:w-1/3 p-3 rounded-md border border-slate-800 bg-white/10 backdrop-blur-md   outline-none focus:ring-2 focus:ring-white/10 transition-all"
                 type="email"
                 {...register("email", { required: true, min: 18, max: 99 })}
               />
               {errors.email?.type === "required" && (
-                <p role="alert" className="text-red-300 text-bold ">
-                  Email is required
+                <p role="alert" className="text-yellow-800 font-bold ">
+                  Email is required ***
                 </p>
               )}
               <input
                 placeholder="Phone Number"
-                className=" text-black w-1/3 p-3 rounded-md border border-slate-800 bg-white/10 backdrop-blur-md   outline-none focus:ring-2 focus:ring-white/10 transition-all"
+                className=" text-black w-full sm:w-1/3 p-3 rounded-md border border-slate-800 bg-white/10 backdrop-blur-md   outline-none focus:ring-2 focus:ring-white/10 transition-all"
                 {...register("phoneNumber", {
                   required: "Phone number is required",
                   minLength: {
@@ -118,20 +118,21 @@ const Contact = () => {
 
               {/* This will display whatever message is triggered (required, minLength, or maxLength) */}
               {errors.phoneNumber && (
-                <p role="alert" className="text-red-300 font-bold">
-                  {errors.phoneNumber.message}
+                <p role="alert" className="text-yellow-900 font-bold">
+                  {errors.phoneNumber.message} ***
                 </p>
               )}
             </div>
             <div className="my-2">
               <textarea
+              rows={6}
                 {...register("message", { required: true })}
                 placeholder="Enter Your Message"
-                className=" text-black w-2/3 p-3 rounded-md border border-slate-800 bg-white/10 backdrop-blur-md   outline-none focus:ring-2 focus:ring-white/10 transition-all"
+                className=" text-black w-full sm:w-2/3 p-3  rounded-md border border-slate-800 bg-white/10 backdrop-blur-md   outline-none focus:ring-2 focus:ring-white/10 transition-all"
               ></textarea>
               {errors.message?.type === "required" && (
-                <p role="alert" className="text-red-500 text-bold ">
-                  Message is required
+                <p role="alert" className="text-yellow-700 font-bold">
+                  Message is required ***
                 </p>
               )}
             </div>

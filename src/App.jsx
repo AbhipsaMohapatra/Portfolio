@@ -7,6 +7,7 @@ import Banner from './components/Banner'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import { Route,Routes,BrowserRouter } from 'react-router-dom'
+import Projects from './components/Projects'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
       {/* Stack them so they are all on one page to allow scrolling */}
       <Banner />
       <Skills />
+      <Projects/>
       <Contact />
    
     
