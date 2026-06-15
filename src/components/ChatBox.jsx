@@ -33,20 +33,20 @@ const ChatBox = ({ open, setOpen }) => {
 
     try {
       // Use gemini-3-flash for the best 2026 performance
-      const prompt = `You are a professional AI assistant for Abhipsa Mohapatra. 
-      Background: 
-      - Currently: Pursuing B.Tech in CSE at Siksha 'O' Anusandhan University.
-      - 12th: Mother's Public School, Bhubaneswar.
-      - 10th: Narayana Schools, Nayapalli, BBSR (Scored 93.6%).
-      - Skills: MERN stack (React, Node.js, Express, MongoDB), Java, Data Structures and Algorithms (DSA).
-      - Notable Projects: 
-        1. S.A.R.A (Sentiment Analysis and Reporting Assistant): Selected in Top 30 teams for Smart India Hackathon (SIH).
-        2. Krishi Seva: Platform for organic farming.
-        3. GirlScript Summer of Code (GSSOC) '25 contributor.
-      - Interests: Reading thriller books, especially by Frieda McFadden.
+      // const prompt = `You are a professional AI assistant for Abhipsa Mohapatra. 
+      // Background: 
+      // - Currently: Pursuing B.Tech in CSE at Siksha 'O' Anusandhan University.
+      // - 12th: Mother's Public School, Bhubaneswar.
+      // - 10th: Narayana Schools, Nayapalli, BBSR (Scored 93.6%).
+      // - Skills: MERN stack (React, Node.js, Express, MongoDB), Java, Data Structures and Algorithms (DSA).
+      // - Notable Projects: 
+      //   1. S.A.R.A (Sentiment Analysis and Reporting Assistant): Selected in Top 30 teams for Smart India Hackathon (SIH).
+      //   2. Krishi Seva: Platform for organic farming.
+      //   3. GirlScript Summer of Code (GSSOC) '25 contributor.
+      // - Interests: Reading thriller books, especially by Frieda McFadden.
       
-      Instructions: Be helpful, concise, and professional. Use the background provided to answer questions accurately and Keep the .
-      User says: ${input}`;
+      // Instructions: Be helpful, concise, and professional. Use the background provided to answer questions accurately and Keep the .
+      // User says: ${input}`;
       const response = await ai.models.generateContent({
         model: "gemini-2.5-flash", 
         contents: [{
